@@ -17,8 +17,7 @@
             --text-main: #ffffff;
             --text-muted: #a0a5b5;
             --text-body: #d1d5db;
-            --accent-blue: #2563eb;
-            --accent-light: #85a5ff;
+            --accent-blue: #85a5ff;
             --border-color: #383b4e;
             --hover-card: #35384a;
         }
@@ -146,7 +145,7 @@
 
         .hero .affiliation {
             font-size: 1.2rem;
-            color: var(--accent-light);
+            color: var(--accent-blue);
             margin-bottom: 26px;
             font-weight: 500;
         }
@@ -174,8 +173,8 @@
         }
 
         .hero-socials a:hover {
-            color: var(--accent-light);
-            border-color: var(--accent-light);
+            color: var(--accent-blue);
+            border-color: var(--accent-blue);
             transform: translateY(-3px);
         }
 
@@ -194,44 +193,7 @@
             line-height: 1.75;
         }
 
-        /* Filter Bar Component */
-        .filter-bar-container {
-            background-color: var(--accent-blue);
-            border-radius: 10px;
-            padding: 12px 20px;
-            margin-bottom: 32px;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
-        }
-
-        .filter-btn {
-            background: transparent;
-            border: none;
-            color: #ffffff;
-            font-size: 0.95rem;
-            font-weight: 500;
-            padding: 6px 16px;
-            border-radius: 6px;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            font-family: inherit;
-        }
-
-        .filter-btn:hover {
-            background-color: rgba(255, 255, 255, 0.15);
-        }
-
-        .filter-btn.active {
-            background-color: rgba(255, 255, 255, 0.28);
-            font-weight: 700;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-        }
-
-        /* Content Sections */
+        /* Sections */
         section {
             padding: 52px 0;
             border-bottom: 1px solid var(--border-color);
@@ -272,7 +234,7 @@
 
         .card:hover {
             background-color: var(--hover-card);
-            border-color: var(--accent-light);
+            border-color: var(--accent-blue);
             transform: translateY(-2px);
         }
 
@@ -294,7 +256,7 @@
 
         .card-meta {
             font-size: 0.85rem;
-            color: var(--accent-light);
+            color: var(--accent-blue);
             font-weight: 600;
         }
 
@@ -317,7 +279,7 @@
 
         .tag {
             background-color: rgba(133, 165, 255, 0.12);
-            color: var(--accent-light);
+            color: var(--accent-blue);
             border: 1px solid rgba(133, 165, 255, 0.25);
             font-size: 0.78rem;
             padding: 3px 11px;
@@ -326,7 +288,7 @@
         }
 
         a.link-accent {
-            color: var(--accent-light);
+            color: var(--accent-blue);
         }
 
         a.link-accent:hover {
@@ -385,7 +347,7 @@
             </div>
 
             <p class="bio-text">
-                I am a Bachelor of Statistical Data Science student at the Indian Statistical Institute, Kolkata. I specialize in Deep Learning, Statistical Modeling, and Mathematical Optimization, building data-driven systems to solve complex analytical problems.
+                I am a Bachelor of Statistical Data Science student at the Indian Statistical Institute, Kolkata. I specialize in Deep Learning, Statistics, Quantitative Finance, and Mathematical Optimization, building data-driven systems to solve complex analytical problems.
             </p>
         </section>
 
@@ -417,26 +379,13 @@
             </div>
         </section>
 
-        <!-- Projects Section with Blue Filter Bar -->
+        <!-- Projects Section -->
         <section id="projects">
             <h2 class="section-title">Projects & Repositories</h2>
-
-            <!-- Updated Blue Filter Bar -->
-            <div class="filter-bar-container">
-                <button class="filter-btn active" onclick="filterProjects('all', this)">All</button>
-                <button class="filter-btn" onclick="filterProjects('deep-learning', this)">Deep Learning</button>
-                <button class="filter-btn" onclick="filterProjects('nlp', this)">NLP</button>
-                <button class="filter-btn" onclick="filterProjects('comp-neuroscience', this)">Comp Neuroscience</button>
-                <button class="filter-btn" onclick="filterProjects('reinforcement-learning', this)">Reinforcement Learning</button>
-                <button class="filter-btn" onclick="filterProjects('statistics', this)">Statistics</button>
-                <button class="filter-btn" onclick="filterProjects('quant-finance', this)">Quantitative Finance</button>
-                <button class="filter-btn" onclick="filterProjects('other', this)">Other</button>
-            </div>
-
             <div class="grid-2">
                 
                 <!-- Dynamic-din-sql -->
-                <div class="card project-card" data-category="nlp deep-learning">
+                <div class="card">
                     <div class="card-header">
                         <h3 class="card-title">Dynamic-din-sql</h3>
                         <p class="card-subtitle">Forked from dg904/Dynamic-din-sql · Python</p>
@@ -449,13 +398,13 @@
                     <div class="tags">
                         <span class="tag">Python</span>
                         <span class="tag">NLP</span>
-                        <span class="tag">Deep Learning</span>
                         <span class="tag">FAISS</span>
+                        <span class="tag">NVIDIA NIM</span>
                     </div>
                 </div>
 
                 <!-- SPARQ Quantitative Trading Strategy -->
-                <div class="card project-card" data-category="quant-finance statistics">
+                <div class="card">
                     <div class="card-header">
                         <h3 class="card-title">SPARQ-Quantitative-Trading-Strategy</h3>
                         <p class="card-subtitle">Jupyter Notebook · Quant Strategy</p>
@@ -466,14 +415,15 @@
                         <li>Achieved a cumulative return of 51.3% over 3 years with a 54.8% win rate.</li>
                     </ul>
                     <div class="tags">
+                        <span class="tag">Jupyter Notebook</span>
                         <span class="tag">Quantitative Finance</span>
                         <span class="tag">Statistics</span>
-                        <span class="tag">Ensemble Models</span>
+                        <span class="tag">Algorithmic Trading</span>
                     </div>
                 </div>
 
                 <!-- candor-memory -->
-                <div class="card project-card" data-category="other">
+                <div class="card">
                     <div class="card-header">
                         <h3 class="card-title">candor-memory</h3>
                         <p class="card-subtitle">Python · Open-Source Project</p>
@@ -490,7 +440,7 @@
                 </div>
 
                 <!-- maths-project -->
-                <div class="card project-card" data-category="quant-finance statistics">
+                <div class="card">
                     <div class="card-header">
                         <h3 class="card-title">maths-project</h3>
                         <p class="card-subtitle">Quantitative Finance & Mathematics</p>
@@ -503,6 +453,7 @@
                     <div class="tags">
                         <span class="tag">Quantitative Finance</span>
                         <span class="tag">Statistics</span>
+                        <span class="tag">Monte Carlo</span>
                         <span class="tag">Differential Equations</span>
                     </div>
                 </div>
@@ -518,7 +469,7 @@
                     <div class="card" style="margin-bottom: 20px;">
                         <h3 class="card-title">Indian Statistical Institute, Kolkata</h3>
                         <p class="card-subtitle">Bachelor of Statistical Data Science</p>
-                        <p style="margin-top: 6px; font-weight: 500; color: var(--accent-light);">Score: 83.2% (Distinction)</p>
+                        <p style="margin-top: 6px; font-weight: 500; color: var(--accent-blue);">Score: 83.2% (Distinction)</p>
                         <p class="card-subtitle" style="margin-top: 2px;">2024 – 2028 (exp.)</p>
                     </div>
                     <div class="card">
@@ -541,7 +492,7 @@
             </div>
         </section>
 
-        <!-- Technical Skills Section -->
+        <!-- Technical Skills & Extracurriculars Section -->
         <section id="skills">
             <div class="grid-2">
                 <div>
@@ -550,7 +501,7 @@
                         <ul>
                             <li><strong style="color: var(--text-main);">Languages:</strong> Python, R, C++, SQL.</li>
                             <li><strong style="color: var(--text-main);">Frameworks & Libraries:</strong> PyTorch, TensorFlow, Scikit-learn, Pandas, NumPy, PuLP, Matplotlib, ggplot2.</li>
-                            <li><strong style="color: var(--text-main);">Domain Knowledge:</strong> Machine Learning, Deep Learning, Statistics, Quantitative Finance, Mathematical Optimization.</li>
+                            <li><strong style="color: var(--text-main);">Domain Knowledge:</strong> Machine Learning, Deep Learning, Statistics, Quantitative Finance, Natural Language Processing, Mathematical Optimization.</li>
                             <li><strong style="color: var(--text-main);">Certifications:</strong> Winter School on Deep Learning (ISI Kolkata, 2026), SPARQ Workshop (2026).</li>
                         </ul>
                     </div>
@@ -575,29 +526,5 @@
         <p>© 2026 Gurman Avtar · Indian Statistical Institute, Kolkata</p>
     </footer>
 
-    <!-- Filter Script -->
-    <script>
-        function filterProjects(category, button) {
-            // Update active state on buttons
-            const buttons = document.querySelectorAll('.filter-btn');
-            buttons.forEach(btn => btn.classList.remove('active'));
-            button.classList.add('active');
-
-            // Filter project cards
-            const cards = document.querySelectorAll('.project-card');
-            cards.forEach(card => {
-                if (category === 'all') {
-                    card.style.display = 'block';
-                } else {
-                    const categories = card.getAttribute('data-category');
-                    if (categories && categories.includes(category)) {
-                        card.style.display = 'block';
-                    } else {
-                        card.style.display = 'none';
-                    }
-                }
-            });
-        }
-    </script>
 </body>
 </html>
