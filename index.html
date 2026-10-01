@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gurman Avtar | Portfolio</title>
+    <style>
+        /* Minimalist, Professional Black & White Theme */
+        :root {
+            --bg: #ffffff;
+            --text-main: #000000;
+            --text-muted: #555555;
+            --border: #e5e5e5;
+            --hover-bg: #f9f9f9;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text-main);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        a.link-underline {
+            border-bottom: 1px solid var(--border);
+        }
+
+        a.link-underline:hover {
+            border-bottom-color: var(--text-main);
+        }
+
+        /* Header & Navigation */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 40px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.2rem;
+            letter-spacing: -0.02em;
+        }
+
+        nav {
+            display: flex;
+            gap: 24px;
+            align-items: center;
+        }
+
+        nav a.nav-link {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--text-muted);
+        }
+
+        nav a.nav-link:hover {
+            color: var(--text-main);
+        }
+
+        .btn-download {
+            background-color: var(--text-main);
+            color: var(--bg) !important;
+            padding: 8px 18px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            border: 1px solid var(--text-main);
+            transition: all 0.2s ease;
+        }
+
+        .btn-download:hover {
+            background-color: var(--bg);
+            color: var(--text-main) !important;
+        }
+
+        /* Sections */
+        section {
+            padding: 60px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        section:last-of-type {
+            border-bottom: none;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 40px;
+            letter-spacing: -0.02em;
+        }
+
+        /* Hero Section */
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin: 0 0 16px 0;
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            max-width: 700px;
+            margin: 0 0 24px 0;
+        }
+
+        /* Grid Layout */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 32px;
+        }
+
+        @media (min-width: 768px) {
+            .grid-2 {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        /* Cards for Experience & Projects */
+        .card {
+            padding: 24px;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            transition: background-color 0.2s;
+        }
+
+        .card:hover {
+            background-color: var(--hover-bg);
+        }
+
+        .card-header {
+            margin-bottom: 16px;
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin: 0 0 4px 0;
+        }
+
+        .card-subtitle {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin: 0;
+        }
+
+        .card-meta {
+            font-size: 0.85rem;
+            color: var(--text-main);
+            font-weight: 500;
+            margin-top: 8px;
+            display: inline-block;
+        }
+
+        .card ul, .text-list ul {
+            margin: 0;
+            padding-left: 18px;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        .card li, .text-list li {
+            margin-bottom: 8px;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 20px;
+        }
+
+        .tag {
+            background-color: #f0f0f0;
+            color: var(--text-main);
+            font-size: 0.75rem;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-weight: 500;
+        }
+
+        /* Footer */
+        footer {
+            padding: 40px 0;
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <div class="logo">Gurman Avtar</div>
+            <nav>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#education" class="nav-link">Education</a>
+                <a href="Gurman_Avtar_CV.pdf" class="btn-download" download>Download CV</a>
+            </nav>
+        </header>
+
+        <!-- Hero -->
+        <section class="hero" id="about">
+            <h1>Statistical Data Scientist</h1>
+            <p>I am a Bachelor of Statistical Data Science student at the Indian Statistical Institute, Kolkata[cite: 1, 2]. I specialize in Deep Learning, Statistical Modeling, and Mathematical Optimization, building data-driven systems that solve rigorous analytical challenges[cite: 1, 2].</p>
+            <div style="display: flex; gap: 16px;">
+                <a href="https://github.com/Gurman368" target="_blank" class="link-underline">GitHub</a>
+                <a href="https://linkedin.com/in/gurman-avtar" target="_blank" class="link-underline">LinkedIn</a>
+                <a href="mailto:niharavtar@gmail.com" class="link-underline">Email</a>
+            </div>
+        </section>
+
+        <!-- Experience -->
+        <section id="experience">
+            <h2 class="section-title">Experience</h2>
+            <div class="card">
+                <div class="card-header" style="display: flex; justify-content: space-between; align-items: baseline;">
+                    <div>
+                        <h3 class="card-title">IIT Kanpur</h3>
+                        <p class="card-subtitle">Summer Intern (SURGE Program) — Onsite[cite: 1]</p>
+                    </div>
+                    <span class="card-meta">2026</span>
+                </div>
+                <ul>
+                    <li>Engineered a machine learning pipeline utilizing 1D-CNN and tree-based models to predict landslide susceptibility across 9,400+ spatial data points[cite: 1].</li>
+                    <li>Developed a custom Auto-VIF algorithm to eliminate multicollinearity and resolved a critical "NaN-bleed" issue, restoring data integrity for 11+ million raster pixels[cite: 1].</li>
+                    <li>Implemented Spatial Block Cross-Validation to mitigate spatial data leakage, yielding a robust 89% ROC-AUC[cite: 1].</li>
+                    <li>Executed steady-state physical modeling via SHALSTAB and evaluated Indian regional climate-normalised thresholds for the Kerala Western Ghats[cite: 2].</li>
+                </ul>
+                <div class="tags">
+                    <span class="tag">Machine Learning</span>
+                    <span class="tag">1D-CNN</span>
+                    <span class="tag">Auto-VIF</span>
+                    <span class="tag">Spatial Modeling</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section id="projects">
+            <h2 class="section-title">Selected Projects</h2>
+            <div class="grid-2">
+                
+                <!-- Project 1 -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">DIN-SQL: Decomposed Text-to-SQL</h3>
+                        <a href="https://github.com/Gurman368/Dynamic-din-sql" target="_blank" class="card-subtitle link-underline">View on GitHub ↗</a>
+                    </div>
+                    <ul>
+                        <li>Developed a few-shot prompting framework decomposing text-to-SQL into sub-tasks (schema linking, query classification, SQL generation, self-correction)[cite: 1, 2].</li>
+                        <li>Achieved state-of-the-art 85.3% execution accuracy on the Spider dataset and 55.9% on the BIRD benchmark, outperforming heavily fine-tuned models[cite: 1, 2].</li>
+                    </ul>
+                    <div class="tags">
+                        <span class="tag">LLMs</span>
+                        <span class="tag">Prompt Engineering</span>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">SPARQ Quantitative Trading</h3>
+                        <a href="https://github.com/Gurman368/SPARQ-Quantitative-Trading-Strategy" target="_blank" class="card-subtitle link-underline">View on GitHub ↗</a>
+                    </div>
+                    <ul>
+                        <li>Developed a weekly rebalancing quantitative trading strategy on NIFTY50 equities using Python[cite: 1, 2].</li>
+                        <li>Engineered a Voting Classifier ensemble (Random Forest + HistGradientBoosting), achieving a 51.3% cumulative return over 3 years with a 54.8% win rate[cite: 1, 2].</li>
+                    </ul>
+                    <div class="tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Algorithmic Trading</span>
+                        <span class="tag">Ensemble Models</span>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Black-Scholes Mathematical Modeling</h3>
+                        <a href="https://github.com/Gurman368/maths-project" target="_blank" class="card-subtitle link-underline">View on GitHub ↗</a>
+                    </div>
+                    <ul>
+                        <li>Formulated an analytical option pricing model by transforming the Black-Scholes PDE into the 1D Heat Equation via spatial Fourier Transforms[cite: 1, 2].</li>
+                        <li>Engineered a vectorized NumPy Monte Carlo simulation proving asymptotic empirical convergence to closed-form solutions[cite: 1, 2].</li>
+                    </ul>
+                    <div class="tags">
+                        <span class="tag">NumPy</span>
+                        <span class="tag">Monte Carlo</span>
+                        <span class="tag">Quantitative Finance</span>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Warehouse Location Optimization</h3>
+                        <p class="card-subtitle">Mixed-Integer Linear Programming</p>
+                    </div>
+                    <ul>
+                        <li>Formulated a MILP in Python (PuLP) optimizing a 4-warehouse configuration based on Poisson-modeled Indian Census demand distributions[cite: 1, 2].</li>
+                        <li>Projected a 12% reduction in operational overhead by minimizing aggregate delivery distance across major logistics hubs[cite: 1, 2].</li>
+                    </ul>
+                    <div class="tags">
+                        <span class="tag">Python (PuLP)</span>
+                        <span class="tag">Optimization</span>
+                        <span class="tag">MILP</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Education & Achievements -->
+        <section id="education">
+            <div class="grid-2">
+                <div>
+                    <h2 class="section-title" style="margin-bottom: 24px;">Education</h2>
+                    <div style="margin-bottom: 20px;">
+                        <h3 class="card-title">Indian Statistical Institute, Kolkata</h3>
+                        <p class="card-subtitle">Bachelor of Statistical Data Science[cite: 1, 2]</p>
+                        <p style="margin-top: 4px; font-weight: 500;">Score: 83.2%[cite: 1]</p>
+                        <p class="card-subtitle" style="margin-top: 4px;">2024 – 2028 (exp.)[cite: 2]</p>
+                    </div>
+                    <div style="margin-bottom: 20px;">
+                        <h3 class="card-title">Navy Children School, India</h3>
+                        <p class="card-subtitle">Class XII (CBSE): 92.8% (2024)[cite: 2]</p>
+                        <p class="card-subtitle">Class X (CBSE): 93.2% (2022)[cite: 2]</p>
+                    </div>
+                </div>
+                <div class="text-list">
+                    <h2 class="section-title" style="margin-bottom: 24px;">Key Achievements</h2>
+                    <ul>
+                        <li><strong style="color: var(--text-main);">Highest Academic Achiever Award:</strong> Merit-based cash prize winner at ISI Kolkata (2025)[cite: 1, 2].</li>
+                        <li><strong style="color: var(--text-main);">IMC Prosperity 3:</strong> Global Rank 249 (out of 16,000+ teams), All India Rank 43 (2025)[cite: 1, 2].</li>
+                        <li><strong style="color: var(--text-main);">SPARQ Quant Competition:</strong> Top 20 Rank in Statistical and Probabilistic Analysis (2026)[cite: 1, 2].</li>
+                        <li><strong style="color: var(--text-main);">ISI Admission Test:</strong> Secured All India Rank 70 (2024)[cite: 1, 2].</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Extracurriculars & Skills -->
+        <section id="skills-extracurriculars">
+            <div class="grid-2">
+                <div class="text-list">
+                    <h2 class="section-title" style="margin-bottom: 24px;">Technical Skills</h2>
+                    <ul>
+                        <li><strong style="color: var(--text-main);">Languages:</strong> Python, R, C++, SQL[cite: 1, 3].</li>
+                        <li><strong style="color: var(--text-main);">Frameworks:</strong> PyTorch, TensorFlow, Scikit-learn, Pandas, NumPy, PuLP[cite: 1, 3].</li>
+                        <li><strong style="color: var(--text-main);">Concepts:</strong> Deep Learning, Machine Learning, Statistical Inference, Optimization[cite: 1, 3].</li>
+                    </ul>
+                </div>
+                <div class="text-list">
+                    <h2 class="section-title" style="margin-bottom: 24px;">Extracurriculars</h2>
+                    <ul>
+                        <li>Active participant in Codeforces competitions (Peak Rating: 1311, 150+ solved problems)[cite: 3].</li>
+                        <li>Internationally FIDE-rated chess player (peak rating: 1432) and 1800+ rated on Chess.com[cite: 3].</li>
+                        <li>Captain of the ISI Football Team (2024–2025) and School Chess Team (2020–2024)[cite: 3].</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>© 2026 Gurman Avtar. Designed with a focus on data and clarity.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
